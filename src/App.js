@@ -20,7 +20,6 @@ const App = () => {
 
     const response = await fetch(link, options);
     const data = await response.json()
-    //console.log(data)
     setzodiac(data)
   }
 

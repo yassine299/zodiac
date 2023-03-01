@@ -1,11 +1,11 @@
-import React, {  useState } from "react"
+import React, { useState } from "react"
 import './App.css';
 
 const App = () => {
   const [zodiac, setzodiac] = useState([]);
   const [time, settime] = useState("today");
   const [sign, setsign] = useState("Aries");
-  const color=""
+
 
 
   const getzodiac = async () => {
@@ -21,7 +21,7 @@ const App = () => {
     const response = await fetch(link, options);
     const data = await response.json()
     //console.log(data)
-     setzodiac(data)
+    setzodiac(data)
   }
 
 
@@ -39,7 +39,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>zodiac signs</h1>
       <h5>time</h5>
       <select value={time} onChange={handleChange}>
@@ -62,19 +62,20 @@ const App = () => {
         <option value="Aquarius">Aquarius</option>
         <option value="Pisces">Pisces</option>
       </select>
-      <p>{`You selected ${sign} and ${time}` }</p>
+      <p>{`You selected ${sign} and ${time}`}</p>
 
       <button onClick={start}>get my sign</button>
 
-      <p>{zodiac.color}</p>
-      <p>{zodiac.compatibility}</p>
-      <p>{zodiac.current_date}</p>
-      <p>{zodiac.date_range}</p>
-      <p>{zodiac.description}</p>
-      <p>{zodiac.lucky_number}</p>
-      <p>{zodiac.lucky_time}</p>
-      <p>{zodiac.mood}</p>
-
+     <div className="result">
+      <p>color :{zodiac.color}</p>
+      <p>compatibility : {zodiac.compatibility}</p>
+      <p>current date : {zodiac.current_date}</p>
+      <p> date range : {zodiac.date_range}</p>
+      <p>description : {zodiac.description}</p>
+      <p>lucky_number : {zodiac.lucky_number}</p>
+      <p> lucky_time : {zodiac.lucky_time}</p>
+      <p>mood :  {zodiac.mood}</p>
+      </div>
     </div>
   )
 };

@@ -2,3 +2,21 @@
   margin: 0;
   padding: 0;
 }
+.container{
+text-align: center;
+margin-top: 70px;
+}
+.container select{
+  width: 10%;
+}
+.container button{
+  background-color: rgb(122, 173, 216);
+  border: none;
+  border-radius: 5%;
+  padding:7px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.result{
+  margin-top: 40px;
+}

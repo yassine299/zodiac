@@ -71,7 +71,7 @@ const App = () => {
       <p>current date : {zodiac.current_date}</p>
       <p> date range : {zodiac.date_range}</p>
       <p>description : {zodiac.description}</p>
-      <p>luckyn umber : {zodiac.lucky_number}</p>
+      <p>lucky number : {zodiac.lucky_number}</p>
       <p> lucky time : {zodiac.lucky_time}</p>
       <p>mood :  {zodiac.mood}</p>
       </div>
